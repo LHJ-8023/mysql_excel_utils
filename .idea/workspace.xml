@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d685310b-178b-421f-a10f-8b280cb6ac6f" name="Default Changelist" comment="" />
+    <list default="true" id="d685310b-178b-421f-a10f-8b280cb6ac6f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/lhj/mysql/excel/utils/MySQLExcelUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/lhj/mysql/excel/utils/MySQLExcelUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/lhj/mysql/excel/test/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/lhj/mysql/excel/test/MyTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,46 +18,47 @@
     <session id="-1799449330">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.143" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.69" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7391" />
+          <entry key="java" value="9468" />
           <entry key="properties" value="49" />
           <entry key="xml" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7391" />
+          <entry key="JAVA" value="9468" />
           <entry key="Properties" value="49" />
           <entry key="XML" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="6" />
+          <entry key="java" value="7" />
           <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="6" />
+          <entry key="JAVA" value="7" />
           <entry key="Properties" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/cn/lhj/mysql/excel/test/MyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="483">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,17 +66,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/lhj/mysql/excel/utils/MySQLExcelUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            <state relative-caret-position="239">
+              <caret line="182" column="116" selection-start-line="182" selection-start-column="116" selection-end-line="182" selection-end-column="116" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#exportFromMySQLToExcel#0;class#MySQLExcelUtil#0" />
-                <element signature="method#exportFromMySQLToExcel#0;class#MySQLExcelUtil#0" />
                 <element signature="method#getAllDataFromTable#0;class#MySQLExcelUtil#0" />
                 <element signature="method#getDataNameAndType#0;class#MySQLExcelUtil#0" />
+                <element signature="method#isTableExist#0;class#MySQLExcelUtil#0" />
               </folding>
             </state>
           </provider>
@@ -85,6 +90,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -124,7 +132,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -176,12 +183,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544975240109" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545136566942" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -200,7 +208,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MyTest.d">
+    <configuration name="MyTest.d" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mysql_excel_utils" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.lhj.mysql.excel.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.lhj.mysql.excel.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.lhj.mysql.excel.test.MyTest" />
+      <option name="METHOD_NAME" value="d" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyTest.fun_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mysql_excel_utils" />
       <extension name="coverage">
@@ -217,8 +241,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.MyTest.fun_1" />
+      <item itemvalue="JUnit.MyTest.d" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyTest.d" />
         <item itemvalue="JUnit.MyTest.fun_1" />
       </list>
     </recent_temporary>
@@ -234,43 +263,44 @@
       <option name="presentableId" value="Default" />
       <updated>1544948070475</updated>
       <workItem from="1544948201883" duration="12561000" />
+      <workItem from="1545131991570" duration="3892000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MyTest_fun_1 - 2018.12.16 at 23h 26m 52s.xml">
-      <configuration name="MyTest.fun_1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyTest_fun_1 - 2018.12.16 at 23h 29m 09s.xml">
-      <configuration name="MyTest.fun_1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyTest_fun_1 - 2018.12.16 at 23h 30m 42s.xml">
-      <configuration name="MyTest.fun_1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyTest_fun_1 - 2018.12.16 at 23h 32m 24s.xml">
-      <configuration name="MyTest.fun_1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyTest_fun_1 - 2018.12.16 at 23h 36m 57s.xml">
-      <configuration name="MyTest.fun_1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyTest_fun_1 - 2018.12.16 at 23h 40m 46s.xml">
-      <configuration name="MyTest.fun_1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyTest_fun_1 - 2018.12.16 at 23h 41m 44s.xml">
-      <configuration name="MyTest.fun_1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyTest_fun_1 - 2018.12.16 at 23h 42m 12s.xml">
-      <configuration name="MyTest.fun_1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyTest_fun_1 - 2018.12.16 at 23h 42m 42s.xml">
-      <configuration name="MyTest.fun_1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MyTest_fun_1 - 2018.12.16 at 23h 44m 54s.xml">
       <configuration name="MyTest.fun_1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MyTest_d - 2018.12.18 at 19h 57m 04s.xml">
+      <configuration name="MyTest.d" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_d - 2018.12.18 at 20h 07m 36s.xml">
+      <configuration name="MyTest.d" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_d - 2018.12.18 at 20h 11m 13s.xml">
+      <configuration name="MyTest.d" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_fun_1 - 2018.12.18 at 20h 13m 27s.xml">
+      <configuration name="MyTest.fun_1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_d - 2018.12.18 at 20h 19m 12s.xml">
+      <configuration name="MyTest.d" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_d - 2018.12.18 at 20h 26m 33s.xml">
+      <configuration name="MyTest.d" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_d - 2018.12.18 at 20h 29m 46s.xml">
+      <configuration name="MyTest.d" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_d - 2018.12.18 at 20h 30m 48s.xml">
+      <configuration name="MyTest.d" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_d - 2018.12.18 at 20h 35m 45s.xml">
+      <configuration name="MyTest.d" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12561000" />
+    <option name="totallyTimeSpent" value="16453000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -289,7 +319,7 @@
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.58919805" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.42459017" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -319,7 +349,7 @@
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.58919805" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.49836066" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -368,26 +398,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/lhj/mysql/excel/test/MyTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lhj/mysql/excel/utils/MySQLExcelUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        <state relative-caret-position="239">
+          <caret line="182" column="116" selection-start-line="182" selection-start-column="116" selection-end-line="182" selection-end-column="116" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;method#exportFromMySQLToExcel#0;class#MySQLExcelUtil#0" />
+            <element signature="method#getAllDataFromTable#0;class#MySQLExcelUtil#0" />
+            <element signature="method#getDataNameAndType#0;class#MySQLExcelUtil#0" />
+            <element signature="method#isTableExist#0;class#MySQLExcelUtil#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/lhj/mysql/excel/utils/MySQLExcelUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/lhj/mysql/excel/test/MyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state relative-caret-position="483">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#exportFromMySQLToExcel#0;class#MySQLExcelUtil#0" />
-            <element signature="method#exportFromMySQLToExcel#0;class#MySQLExcelUtil#0" />
-            <element signature="method#getAllDataFromTable#0;class#MySQLExcelUtil#0" />
-            <element signature="method#getDataNameAndType#0;class#MySQLExcelUtil#0" />
           </folding>
         </state>
       </provider>

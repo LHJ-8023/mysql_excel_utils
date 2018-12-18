@@ -1,15 +1,14 @@
 package cn.lhj.mysql.excel.utils;
 
+import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.CellType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.sql.*;
 import java.util.*;
 
@@ -92,9 +91,6 @@ public class MySQLExcelUtil {
 
             }
         }
-		
-		//关闭连接
-		MySQLConnectionUtil.close(statement);
 
         //保存工作簿
         try {
@@ -111,6 +107,91 @@ public class MySQLExcelUtil {
             e.printStackTrace();
         }
 
+    }
+
+    public static void importFromExcelToMySQL(String ip, String port, String database,
+                                              String username, String password, String xlsFile){
+        Connection conn = MySQLConnectionUtil.getConnection(ip, port, database, username, password);
+        if(conn == null){
+            log.error("连接数据库失败");
+            throw new RuntimeException("连接数据库失败");
+        }
+
+        if(!(xlsFile.endsWith(".xls") || xlsFile.endsWith(".xlsx"))){
+            log.error("文件格式错误，应为.xls 或 .xlsx，你的: " + xlsFile);
+            throw new RuntimeException("文件格式错误，应为.xls 或 .xlsx，你的: " + xlsFile);
+        }
+
+        try{
+            InputStream in = new FileInputStream(xlsFile);
+            HSSFWorkbook workbook = new HSSFWorkbook(in);
+
+            //获取工作簿中表的数量
+            int sheetNum = workbook.getNumberOfSheets();
+
+            //遍历每一张表
+            for(int i = 0; i < sheetNum; i++){
+                //获取当前操作的表
+                HSSFSheet sheet = workbook.getSheetAt(i);
+                //获取当前操作表的名称 -- 数据库表名
+                String sheetName = sheet.getSheetName();
+                //获取当前操作表的数据行数
+                int rowNum = sheet.getLastRowNum();
+                //获取第一行 -- 表中的列名
+                HSSFRow firstRow = sheet.getRow(0);
+                //获取每一行的列数
+                int colNum = firstRow.getLastCellNum();
+
+                //获取表中列名串 id,name,age...
+                StringBuffer columnNames = new StringBuffer();
+                for(int j = 1; j < colNum; j++){
+                    columnNames.append(firstRow.getCell(j).getStringCellValue());
+                    columnNames.append(",");
+                }
+                columnNames.deleteCharAt(columnNames.length() - 1);
+
+                //遍历除第一行以外的其它行 -- 数据
+                for(int j = 1; j <= rowNum; j++){
+                    //获取当前操作的行
+                    HSSFRow currRow = sheet.getRow(j);
+                    //遍历当前操作行的每一列
+                    StringBuffer values = new StringBuffer();
+                    for(int col = 1; col < colNum; col++){
+                        HSSFCell cell = currRow.getCell(col);
+                        cell.setCellType(CellType.STRING);
+                        values.append("'" + cell.getStringCellValue() + "'");
+                        values.append(",");
+                    }
+                    values.deleteCharAt(values.length() - 1);
+                    String sql = "INSERT INTO " + sheetName + " (" + columnNames.toString() + ") VALUES (" + values.toString() + ")";
+
+                    if(isTableExist(conn, sheetName)){
+                        //数据库中存在表
+                        PreparedStatement statement = null;
+                        try {
+                            statement = conn.prepareStatement(sql);
+                            statement.execute();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                            log.error("执行SQL语句出错: " + sql);
+                            log.error(e.getMessage());
+                        } finally {
+                            MySQLConnectionUtil.close(statement);
+                        }
+                    }else{
+                        log.error("数据库中不存在表: " + sheetName + "，请检查数据库以及xls文件中的sheet名称是否和数据库中表名一致");
+                        throw new RuntimeException("数据库中不存在表: " + sheetName + "，请检查数据库以及xls文件中的sheet名称是否和数据库中表名一致");
+                    }
+                }
+            }
+        } catch (FileNotFoundException e){
+            log.error("找不到目标文件: " + xlsFile);
+            log.error(e.getMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
+            log.error("加载Excel文件失败");
+            log.error(e.getMessage());
+        }
     }
 
     private static Map<Integer, Map<String, Object>> getAllDataFromTable(String tableName, Connection conn){
@@ -177,6 +258,18 @@ public class MySQLExcelUtil {
         }
 
         return res;
+    }
+
+    private static boolean isTableExist(Connection conn, String tableName){
+        try {
+            ResultSet rs = conn.getMetaData().getTables(null, null, tableName, null);
+            return rs.next();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            log.error("获取数据库metaData失败");
+            log.error(e.getMessage());
+            return false;
+        }
     }
 
 }
